@@ -47,6 +47,7 @@ this.cultists_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 		bros[0].getSkills().add(this.new("scripts/skills/perks/perk_rally_the_troops"));
 		this.addScenarioPerk(bros[0].getBackground(), this.Const.Perks.PerkDefs.LegendTrueBeliever);
 		bros[0].setPlaceInFormation(2);
+		bros[0].getSkills().add(this.new("scripts/skills/traits/player_character_trait"));
 		bros[0].getFlags().set("IsPlayerCharacter", true);
 		local items = bros[0].getItems();
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
