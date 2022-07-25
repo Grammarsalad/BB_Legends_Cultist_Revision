@@ -47,11 +47,12 @@ this.cultists_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 		bros[0].getSkills().add(this.new("scripts/skills/perks/perk_rally_the_troops"));
 		this.addScenarioPerk(bros[0].getBackground(), this.Const.Perks.PerkDefs.LegendTrueBeliever);
 		bros[0].setPlaceInFormation(2);
+		bros[0].getFlags().set("IsPlayerCharacter", true);
 		local items = bros[0].getItems();
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.equip(this.new("scripts/items/weapons/battle_whip"));
 		bros[1].setStartValuesEx([
-			"legend_husk_background"
+			"cultist_background"
 		]);
 		bros[1].getBackground().m.RawDescription = "%name% found you upon the road, stating with certainty you were a mercenary captain. You wore but ordinary cloth at that moment, but %name% said that by Davkul\'s darkness you had an aura of wanted Black about you.";
 		this.addScenarioPerk(bros[1].getBackground(), this.Const.Perks.PerkDefs.LegendTrueBeliever);
@@ -106,7 +107,7 @@ this.cultists_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 			]
 		]));
 		bros[4].setStartValuesEx([
-			"legend_lurker_background"
+			"cultist_background"
 		]);
 		bros[4].getBackground().m.RawDescription = "%name% banded with you outside a tavern. The first time you saw the cultist, there were scars running up %name%\'s arms and across veins that could not be survived. But each morning it appears as though the scars move, slowly creeping in one direction: toward the forehead.";
 		this.addScenarioPerk(bros[4].getBackground(), this.Const.Perks.PerkDefs.LegendTrueBeliever);
